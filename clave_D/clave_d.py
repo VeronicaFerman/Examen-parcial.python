@@ -117,8 +117,21 @@ Computadora
 
 
 class VentaComputadoras:
-    def orden(self):
-        pass
+    def __init__(self, tuplaComputadora):
+        self.tuplaComputadora = tuplaComputadora
+        self.dictCompu = {}
+ 
+    def orden(self, tuplaComputadora):
+        listaCompus = list(tuplaComputadora)
+        dictCompus= {"procesador": listaCompus[0]}
+        dictCompus["ram"] = listaCompus[1]
+        dictCompus["tarjeta grafica"] = listaCompus[2]
+        dictCompus["ssd"]: listaCompus[3]
+        dictCompus["costo"]: listaCompus[4]
+        dictCompus["conDescuento"]: listaCompus[5]
+        dictCompus["descuento"]: listaCompus[6]
+        dictCompus["conPlazo"]: listaCompus[7]
+        dictCompus["cuota"]: listaCompus[8]
 
     def totalProcesadorIntel(self):
         return 0
@@ -126,6 +139,8 @@ class VentaComputadoras:
     def totalRam16ConDescuento(self):
         return 0
 
+ventaCompus = VentaComputadoras(("intel", "16gb", "nvidia", "1Tb", 700.0, True, 70.0, False, 0.0))
+ventaCompus.orden(("intel", "16gb", "nvidia", "1Tb", 700.0, True, 70.0, False, 0.0))
 
 class Computadora:
     def __init__(self, compuList):
@@ -142,4 +157,5 @@ github_<nombre>_<codigo>.txt y subirlo a moodle
 
 # github url-->
 def getGithubUrl():
-    return "https://github.com/VeronicaFerman/Examen-parcial.python"
+    result = "https://github.com/VeronicaFerman/Examen-parcial.python"
+    return result
